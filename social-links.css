@@ -1,0 +1,91 @@
+.attribution { font-size: 0.6rem; text-align: center;  color:white}
+.attribution a:link, .attribution a:visited{
+   text-decoration: none; color: var(--Green);
+}  
+.attribution a:hover
+{ background-color: hsl(228, 45%, 44%); color: white; }
+
+:root{
+    --Green: rgb(197, 248, 42);
+    --White: rgb(255, 255, 255);
+    --Grey700: rgb(62, 62, 62);
+    --Grey800: rgb(40, 40, 40);
+    --Grey900: rgb(19, 19, 19);
+}
+
+body{margin: 0%;    background-color: var(--Grey900);   width: 100vw;}
+main.PCcentre{
+    height: 100vh;  width: 100vw;
+    display: flex;  flex-flow: row wrap;
+    justify-content: center;    align-items: center;  
+} 
+main.PCcentre>main{
+    background-color: var(--Grey800);
+    border: 1px solid var(--Grey800);
+    border-radius: 10px;
+    height: auto;   width: 26%;    padding: 2rem;
+    display: flex;  flex-flow: column nowrap; gap: 1.4rem;
+    justify-content: center;    align-items: center; 
+}
+
+#profile{
+    display: flex;  flex-flow: column nowrap; gap: 0.5rem;
+    justify-content: center;    align-items: center; 
+}
+#profile>.profile_pics{
+    border-radius: 50%;width: 10rem; height: 10rem;
+    background-image: url('./assets/images/IMG_0559~2.JPG');
+    background-size: contain;
+}
+#profile>.name{
+    color: var(--White);
+    font-weight: bold;  font-size: 0.88rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#profile>.location{
+    color: var(--Green);
+    font-size: 0.81rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#profile>.descri, #follow{
+    color: var(--White);
+    font-size: 0.68rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#socialMedia-links{
+    display: flex; gap:9px;    flex-flow: column nowrap;
+}
+#socialMedia-links>a:link, #socialMedia-links>a:visited{ 
+    text-decoration: none;
+    padding-top: 7px ; padding-bottom: 7px ;
+    text-align:  center;
+    color: var(--White);    background-color: var(--Grey700); 
+    font-weight: bold;  font-size: 0.8rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: auto;   width: 12rem
+}
+#socialMedia-links>a:hover{
+    padding-top: 10px ; padding-bottom: 10px ;
+    height: auto;   width: 12rem; background-color:hsl(228, 45%, 44%)
+}
+#socialMedia-links div.socialMedia-link{
+    padding-top: 7px ; padding-bottom: 7px ;
+    text-align:  center;
+    color: var(--White);    
+    font-weight: bold;  font-size: 0.8rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: auto;   width: 12rem
+}
+
+@media screen and (max-width:420px){ body{margin-top: 3.2rem;}
+    main.PCcentre>main{
+        width: 70%;  height: auto;    border-radius: 6px;
+    }
+    #socialMedia-links{
+        display: flex; gap:7px;    flex-flow: column nowrap;
+    }
+}
+@media screen and (min-width:421px) and (max-width:820px){
+    main.PCcentre>main{
+        width: 52%;  height: auto;    border-radius: 8px;
+    }
+    #socialMedia-links{
+        display: flex; gap:7px;    flex-flow: column nowrap;
+    }
+}
